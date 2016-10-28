@@ -3,8 +3,8 @@
 -- Whole bunch of functions i tend to utilise alot
 
 local function I(str)
-    include("b_lib" .. str)
-    AddCSLuaFile("b_lib" .. str .. ".lua")
+    include("b_lib/" .. str .. ".lua")
+    AddCSLuaFile("b_lib/" .. str .. ".lua")
 end
 
 I"misc"
