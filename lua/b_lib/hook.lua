@@ -1,11 +1,12 @@
 --hookshit
 
 -- self explanatory
+local hooknum = 0
 function hook.RunOnce(str, func)
-    local c = "temporary_hook_" .. math.random(0, 100000)
+    hooknum = hooknum + 1
+    local c = "temporary_hook_" .. hooknum
 
-    hook.Add(str, c, function(...)
-        func(...)
+        func( ... )
         hook.Remove(str, c)
     end)
 end
