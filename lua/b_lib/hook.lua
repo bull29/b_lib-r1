@@ -40,3 +40,11 @@ function hook.FnSearch( needle, printfn )
         end
     end
 end
+
+-- useful for debugging certain conditions/hooks - don't be stupid with this
+function hook.RemoveAll( st )
+    local h = hook.GetTable()[ st ]
+    for k, v in pairs( h ) do
+        hook.Remove( st, k )
+    end
+end
