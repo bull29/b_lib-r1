@@ -10,3 +10,8 @@ end
 function col.increment( col, am )
     return Color( col.r + am, col.g + am, col.b + am, col.a or 255 )
 end
+
+-- random color with optional alpha declaration
+function col.random( al )
+    return Color( math.random( 0, 255 ), math.random( 0, 255 ), math.random( 0, 255 ), al or 255 )
+end
