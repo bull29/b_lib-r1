@@ -21,6 +21,7 @@ function hook.FnSearch( needle, printfn )
             local t = debug.getinfo(g)
             local last, first, source = t.lastlinedefined, t.linedefined, t.source
             local f = file.Open(t.source:sub(2), "r", "GAME")
+            if not f then continue end
             local str = ""
 
             for i = 0, last + 1 do
