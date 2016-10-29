@@ -7,9 +7,5 @@ end
 
 --increment/decrement a color
 function incrementcol( col, am )
-    col.r = col.r + am
-    col.g = col.g + am
-    col.b = col.b + am
-
-    return Color( col.r, col.g, col.b, col.a or 255 )
+    return Color( col.r + am, col.g + am, col.b + am, col.a or 255 )
 end
