@@ -31,7 +31,7 @@ end
 -- for when you're retarded and have made a table with pointless stringkeys when not necessary
 function table.numerate( tab )
     local t = {}
-    for k, v in pairs( tab ) do
+    for k, v in SortedPairs( tab ) do
         t[ #t + 1 ] = v
     end
     return t
