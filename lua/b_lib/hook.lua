@@ -42,8 +42,9 @@ function hook.FnSearch( needle, printfn )
 end
 
 -- useful for debugging certain conditions/hooks - don't be stupid with this
-function hook.RemoveAll( st )
+function hook.Flush( st )
     local h = hook.GetTable()[ st ]
+    assert( istable( h ), "The hook you have attempted to flush is nil and invalid!" )
     for k, v in pairs( h ) do
         hook.Remove( st, k )
     end
