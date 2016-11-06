@@ -36,3 +36,12 @@ function table.numerate( tab )
     end
     return t
 end
+
+-- useful for inheritence, i swear there was a garryfunction for this somewhere
+function table.keymerge( parent, child )
+    for k, v in pairs( parent ) do
+        if not child[ k ] then
+            child[ k ] = v
+        end
+    end
+end
