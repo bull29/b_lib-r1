@@ -1,17 +1,16 @@
---colorstuff
-col = col or {}
+local COLOR = FindMetaTable("Color")
 
 -- negate a color/return the opposite of a color
-function col.negate( c )
-    return Color( 255 - c.r, 255 - c.g, 255 - c.b, col.a or 255 )
+function COLOR:Negate()
+    return Color( 255 - self.r, 255 - self.g, 255 - self.b, self.a )
 end
 
 --increment/decrement a color
-function col.increment( c, am )
-    return Color( c.r + am, c.g + am, c.b + am, c.a or 255 )
+function COLOR:Increment( am )
+    return Color( self.r + am, self.g + am, self.b + am, self.a )
 end
 
 -- random color with optional alpha declaration
-function col.random( al )
+function randomColor( al )
     return Color( math.random( 0, 255 ), math.random( 0, 255 ), math.random( 0, 255 ), al or 255 )
 end
