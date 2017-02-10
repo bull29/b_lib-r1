@@ -10,7 +10,7 @@ function print( ... )
     local args = {...}
 
     for k, v in pairs(args) do
-        str = str .. tostring( v )
+        str = str .. "\t" .. tostring( v )
     end
 
     ServerLog(str .. "\n")
