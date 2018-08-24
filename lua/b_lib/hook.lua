@@ -24,6 +24,7 @@ function hook.FnSearch( needle, printfn )
             if not f then continue end
             local str = ""
 
+
             for i = 0, last + 1 do
                 local st = f:ReadLine()
                 if i >= first - 1 then
